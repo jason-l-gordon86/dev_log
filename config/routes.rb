@@ -53,5 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
+  root to: 'articles#index'
 end
